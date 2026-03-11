@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Quiz.css'
 
 export default function Quiz({ questions, onFinish }) {
     /* La mémoire */

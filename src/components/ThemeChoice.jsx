@@ -1,3 +1,5 @@
+import './ThemeChoice.css'
+
 export default function ThemeChoice({ onSelect }) {
   return (
     /*HTML ici*/
