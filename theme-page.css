@@ -1,0 +1,71 @@
+/* Style du fond (Ecran Desktop) */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Le cadre du téléphone */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3; /* Couleur gris/bleu clair du fond */
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+/* Titre en haut */
+.selection-title {
+    font-size: 23px;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+/* Conteneur de la liste */
+.categories-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Espace entre chaque bloc */
+    overflow-y: auto; /* Permet de scroller si la liste est longue */
+    padding-bottom: 20px;
+}
+
+/* Bloc d'une catégorie */
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.01); /* Petit effet de zoom au survol */
+}
+
+/* Image du personnage Wiki */
+.category-img {
+    width: 120px; /* Ajuste selon la taille de tes PNG */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Texte sous l'image */
+.category-name {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin: 0;
+}
