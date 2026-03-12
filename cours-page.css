@@ -1,0 +1,79 @@
+/* Base de la page */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Format téléphone */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+/* Mascotte en haut à droite */
+.header-decoration {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligne à droite */
+    margin-bottom: 20px;
+}
+
+.mini-char {
+    width: 80px;
+    height: auto;
+}
+
+/* Conteneur des boutons avec scroll si besoin */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    overflow-y: auto; /* Permet de scroller si tu ajoutes plus de boutons */
+    align-items: center;
+}
+
+/* La petite barre de titre/indicateur fine */
+.top-bar-indicator {
+    width: 90%;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #1a1a1a;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style des boutons CTA (les box blanches) */
+.cta-box {
+    width: 95%;
+    height: 70px; /* Ajuste selon ton design */
+    background-color: #ffffff;
+    border: 1px solid #1a1a1a;
+    border-radius: 40px; /* Forme très arrondie */
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+/* Effet au clic */
+.cta-box:active {
+    transform: scale(0.98);
+    background-color: #f0f0f0;
+}
+
+/* Scrollbar invisible pour garder le look app */
+.cta-container::-webkit-scrollbar {
+    display: none;
+}
