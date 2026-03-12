@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ebedf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.app-viewport {
+    width: 360px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 20px;
+}
+
+/* Animation de flottement pour la mascotte */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mascotte {
+    width: 150px;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Cadre blanc avec effet de profondeur doux */
+.login-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 60px;
+    padding: 50px 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    /* Animation d'apparition fluide */
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+label {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input fluide avec changement de couleur au focus */
+.input-pseudo {
+    width: 100%;
+    padding: 18px;
+    border-radius: 40px;
+    border: 2px solid transparent;
+    background-color: #f0f2f5;
+    margin-bottom: 30px;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.input-pseudo:focus {
+    background-color: #fff;
+    border-color: #4472c4;
+    box-shadow: 0 5px 15px rgba(68, 114, 196, 0.2);
+}
+
+/* Bouton bleu avec effet de survol dynamique */
+.btn-bleu {
+    background-color: #4472c4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(68, 114, 196, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-bleu:hover {
+    background-color: #355da8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(68, 114, 196, 0.4);
+}
+
+.btn-bleu:active {
+    transform: scale(0.95);
+}
