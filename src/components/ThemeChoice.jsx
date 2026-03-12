@@ -2,12 +2,30 @@ import './ThemeChoice.css'
 
 export default function ThemeChoice({ onSelect }) {
   return (
-    /*HTML ici*/
-    <div className="">
-      <h2>Par quoi souhaites-tu commencer ?</h2>
-      <button onClick={() => onSelect('histoire')}>📜 Histoire</button>
-      <button onClick={() => onSelect('science')}>🧪 Science</button>
-      <button onClick={() => onSelect('culture')}>🎨 Culture</button>
+    <div className="screen content">
+      <h1 className="selection-title">Par quoi souhaites-tu commencer ?</h1>
+      
+      <div className="categories-list">
+        
+        {/* Catégorie Histoire */}
+        <div className="category-item" onClick={() => onSelect('histoire')}>
+          <img src="/assets/mascotte-reading.gif" alt="Histoire" className="category-img" />
+          <p className="category-name">Histoire</p>
+        </div>
+
+        {/* Catégorie Science */}
+        <div className="category-item" onClick={() => onSelect('science')}>
+          <img src="/assets/mascotte-science.gif" alt="Science" className="category-img" />
+          <p className="category-name">Science</p>
+        </div>
+
+        {/* Catégorie Culture */}
+        <div className="category-item" onClick={() => onSelect('culture')}>
+          <img src="/assets/mascotte-culture.gif" alt="Culture" className="category-img" />
+          <p className="category-name">Culture</p>
+        </div>
+
+      </div>
     </div>
   );
 }

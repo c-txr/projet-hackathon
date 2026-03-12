@@ -12,10 +12,16 @@ export default function LandingPage({ onNext }) {
     }, [onNext]); // <-- On ferme bien le useEffect ici !
 
   return (
-    <div className="screen landing">
-      {/* HTML classique ici ici (mascotte, titre...) */}
-      <h1>Wiki Learn</h1>
-      <button onClick={onNext}>Démarrer</button>
-    </div>
+    <div className="iphone-frame">
+        <div className="screen-content">
+          <img src="/assets/mascotte-reading.gif" alt="Wiki Logo" className="logo-gif" />
+          <h1 className="app-title">Wiki Learn</h1>
+        </div>
+        <div className="loader">
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
   );
 }
