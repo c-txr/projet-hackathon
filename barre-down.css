@@ -1,0 +1,53 @@
+/* Fond de la page (Vue ordinateur) */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Boîtier du téléphone */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3; /* Gris bleuté clair */
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Coupe le panneau blanc pour qu'il ne dépasse pas du téléphone */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+/* Personnage en haut */
+.top-decoration {
+    padding-top: 40px;
+    flex-shrink: 0;
+}
+
+.char-img {
+    width: 140px;
+    height: auto;
+}
+
+/* Panneau blanc en bas */
+.bottom-panel {
+    background-color: #ffffff;
+    bottom: 0;
+    margin-top: 40px; /* Espace sous le personnage */
+    flex-grow: 1;    /* S'étire jusqu'en bas du téléphone */
+    border-radius: 60px 60px 0 0; /* Arrondit seulement les coins du haut */
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+    border-top: 2px solid #1a1a1a;
+    position: absolute;
+    bottom: 0;           /* Colle parfaitement au bas */
+    left: 0;             /* Aligne au bord gauche */
+    width: 100%;         /* Prend toute la largeur du téléphone */
+    height: 120px;       /* Ajuste cette hauteur selon ton design Figma */
+    border: 2px solid #1a1a1a;
+}
