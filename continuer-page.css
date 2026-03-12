@@ -1,0 +1,90 @@
+/* Base de la page */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Format téléphone */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+.header-section {
+    margin-bottom: 40px;
+}
+
+.char-small {
+    width: 140px;
+    height: auto;
+}
+
+/* Conteneur pour espacer les boutons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espace entre les boutons */
+    width: 100%;
+    align-items: center;
+}
+
+/* Style commun à tous les boutons "Continuer" */
+.btn-continuer {
+    width: 220px;
+    height: 65px;
+    border-radius: 35px; /* Forme pilule */
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-continuer:active {
+    transform: scale(0.95);
+}
+
+/* VARIANTES DE COULEURS */
+
+/* 1. Bleu plein */
+.btn-filled-blue {
+    background-color: #3B66CC;
+    color: white;
+    border: 2px solid #1a1a1a;
+}
+
+/* 2. Contour Vert */
+.btn-outline-green {
+    background-color: #E0F7F4;
+    color: #1a1a1a;
+    border: 2px solid #45B39D;
+}
+
+/* 3. Contour Rouge/Rose */
+.btn-outline-red {
+    background-color: #FFEBEE;
+    color: #1a1a1a;
+    border: 2px solid #EC7063;
+}
+
+/* 4. Contour Noir */
+.btn-outline-black {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+}

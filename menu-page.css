@@ -1,0 +1,47 @@
+/* Style du fond (Vue Desktop) */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Le boîtier du téléphone */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3; /* Gris clair bleuté */
+    border-radius: 40px;
+    position: relative; /* Important pour placer les éléments à l'intérieur */
+    overflow: hidden; /* Coupe ce qui dépasse du cadre arrondi */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+/* Positionnement du personnage en haut */
+.top-decoration {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre le personnage horizontalement */
+    padding-top: 30px;
+}
+
+.mini-char {
+    width: 120px;
+    height: auto;
+}
+
+/* Le panneau blanc arrondi sur la gauche */
+.side-panel {
+    position: absolute;
+    left: -250px;
+    top: 150px;  /* Ajuste selon la hauteur du personnage */
+    width: 80%;  /* Prend une bonne partie de la largeur */
+    height: 100%; /* Descend jusqu'en bas */
+    background-color: #ffffff;
+    border: 2px solid #a7a2a2;
+    border-radius: 40px; /* Bords très arrondis */
+    box-shadow: 10px 0 15px rgba(0,0,0,0.05);
+}

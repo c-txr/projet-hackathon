@@ -1,0 +1,82 @@
+/* Base de la page */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Le boîtier du téléphone */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+.top-section {
+    margin-bottom: 15px;
+}
+
+.mini-char {
+    width: 100px;
+    height: auto;
+}
+
+/* Rectangle blanc central */
+.question-card {
+    background-color: #ffffff;
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 50px;
+    border: 1px solid #1a1a1a;
+    margin-bottom: 25px;
+}
+
+/* Alignement des 4 boutons */
+.quiz-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Style commun des boutons pilules */
+.answer-btn {
+    height: 60px;
+    border-radius: 35px; /* Forme très ovale */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.answer-btn:active {
+    transform: scale(0.95);
+}
+
+/* BOUTON VERT (Succès) */
+.btn-success {
+    background-color: #E0F7F4; /* Fond vert très clair */
+    border-color: #45B39D;     /* Bordure menthe */
+    color: #1a1a1a;
+}
+
+/* BOUTONS ROSES (Erreur) */
+.btn-error {
+    background-color: #FFEBEE; /* Fond rose très clair */
+    border-color: #EC7063;     /* Bordure rouge/rose */
+    color: #1a1a1a;
+}

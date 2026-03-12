@@ -1,0 +1,74 @@
+/* Fond de la page (Ecran Desktop) */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Le cadre du téléphone */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3; /* Fond gris bleuté */
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+/* Personnage du haut */
+.top-section {
+    margin-bottom: 15px;
+}
+
+.mini-char {
+    width: 100px;
+    height: auto;
+}
+
+/* Carte blanche centrale */
+.question-card {
+    background-color: #ffffff;
+    width: 100%;
+    flex-grow: 1; /* Prend tout l'espace disponible */
+    border-radius: 50px; /* Bords très arrondis */
+    border: 1px solid #1a1a1a;
+    margin-bottom: 25px;
+}
+
+/* Grille des boutons */
+.quiz-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes */
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Style des boutons (forme pilule) */
+.answer-btn {
+    background-color: #ffffff;
+    border: 1px solid #1a1a1a;
+    height: 55px;
+    border-radius: 30px; /* Forme ovale/pilule */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.answer-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.answer-btn:active {
+    transform: translateY(0);
+}
