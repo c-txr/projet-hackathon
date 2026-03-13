@@ -1,3 +1,4 @@
+/* image du personnage */
 /* Base commune */
 body {
     background-color: #1a1a1a;
@@ -33,6 +34,8 @@ body {
 .char-img {
     width: 200px;
     height: auto;
+<<<<<<< HEAD
+=======
     position: relative;
     /* Application de l'animation de flottement par défaut */
     animation: floatMascot 3s ease-in-out infinite;
@@ -44,14 +47,15 @@ body {
     animation: pulseMascot 0.8s ease-in-out infinite;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
     cursor: pointer;
+>>>>>>> 60cd8161bd58a16c7a45c8125a76c618f81a9a5d
 }
 
-/* La carte blanche arrondie */
+/* la carte blanche arrondie */
 .selection-card {
     background-color: white;
     width: 100%;
     padding: 40px 20px;
-    border-radius: 60px; /* Très arrondi comme sur l'image */
+    border-radius: 60px; /* très arrondi comme sur l'image */
     border: 2px solid #1a1a1a;
     display: flex;
     flex-direction: column;
@@ -66,7 +70,6 @@ body {
     font-weight: normal;
 }
 
-/* Style du champ de saisie (Input) */
 .pseudo-input {
     width: 100%;
     height: 60px;
@@ -81,11 +84,9 @@ body {
     text-align: center;
 }
 
-/* Le bouton bleu Valider */
 .btn-validate {
     background-color: #3B66CC;
     color: white;
-    text-decoration: none;
     font-family: 'Georgia', serif;
     font-size: 22px;
     padding: 10px 50px;

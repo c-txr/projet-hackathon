@@ -5,9 +5,9 @@ export default function PseudoChoice({ onNext }) {
   const [pseudo, setPseudo] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Empêche le rechargement de la page
+    e.preventDefault(); // empêche le rechargement de la page
     if (pseudo.trim().length > 2) {
-      onNext(pseudo); // On envoie le pseudo au parent (App.jsx)
+      onNext(pseudo); // on envoie le pseudo au parent (App.jsx)
     } else {
       alert("Choisis un pseudo d'au moins 3 caractères !");
     }

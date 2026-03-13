@@ -7,7 +7,7 @@ const RESULTS_DATA = {
     50: { badge: "Palefrenier", img: "/assets/mascotte-palefrenier.png", texte: "Holà, jeune page ! L’écurie du savoir est encore vaste et la paille haute, mais n’abandonne point ta quête." },
     100: { badge: "Fou du Roi", img: "/assets/mascotte-fou.png", texte: "Tes pirouettes d’esprit amusent la galerie, mais le chemin vers la sagesse est parsemé d’embûches." },
     150: { badge: "Chevalier du savoir", img: "/assets/mascotte-chevalier.png", texte: "Noble vassal, ton épée est affûtée et ton esprit prompt ! Tu connais les chroniques de tes ancêtres." },
-    200: { badge: "Sa Majesté", img: "/assets/mascotte-majeste.png", texte: "Par la grâce des cieux, Sa Majesté déploie une érudition sans faille. Une maîtrise digne d'un trône." },
+    200: { badge: "Sa Majesté", img: "/assets/mascotte-princesse.png", texte: "Par la grâce des cieux, Sa Majesté déploie une érudition sans faille. Une maîtrise digne d'un trône." },
     250: { badge: "Le Roi du savoir", img: "/assets/mascotte-roi.png", texte: "Gloire à vous ! Vous régnez sans partage sur les annales du temps. Aucun secret ne vous résiste." }
   },
   culture: {
