@@ -4,3 +4,10 @@
   margin: 0;
   padding: 0;
   }
+  /* --- Charts couleur globale (Design System) --- */
+:root {
+    --bg-main: #FFFFFF;
+    --text-main: #202122;
+    --ui-grey: #EAECF0;
+    --wiki-blue: #3366CC;
+}
