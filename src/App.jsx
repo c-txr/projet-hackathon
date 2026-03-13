@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import LandingPage from './components/LandingPage'
 import Accueil from './components/Accueil'
 import PseudoChoice from './components/PseudoChoice'
@@ -11,7 +11,21 @@ import Resultpage from './components/ResultPage'
 
 function App(){
   const [step, setStep] = useState(1); /* numéro de la page actuelle */
-  const [userName, setUserName] = useState(""); /* pour stocker le pseudo */
+  const [userName, setUserName] = useState(() => {
+    return localStorage.getItem("wikiLearn_pseudo") || "";
+  });
+  
+  const [totalXP, setTotalXP] = useState(() => {
+    return parseInt(localStorage.getItem("wikiLearn_xp")) || 0;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("wikiLearn_pseudo", userName);
+  }, [userName]);
+
+  useEffect(() => {
+    localStorage.setItem("wikiLearn_xp", totalXP);
+  }, [totalXP]);
   const [category, setCategory] = useState('histoire'); /* retient le thème choisi */
   const [finalScore, setFinalScore] = useState(0); /* enregistre les pts gagnés à la fin du quiz*/
 
@@ -59,11 +73,13 @@ function App(){
       <Quiz questions={quizData[category].questions}
       category={category}
       title={quizData[category].title}
-      onFinish={(s) => 
-      { setFinalScore(s); 
-      setStep(7); 
-      }} 
-      onQuit={() => setStep(4)}/>
+      onFinish={(s) => { 
+        setFinalScore(s);
+        setTotalXP((prevXP) => prevXP + s);
+        setStep(7); 
+      }}
+      onQuit={() => setStep(4)}
+      />
       )}
     
     {step === 7 && (
