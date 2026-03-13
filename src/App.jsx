@@ -62,7 +62,8 @@ function App(){
       onFinish={(s) => 
       { setFinalScore(s); 
       setStep(7); 
-      }} />
+      }} 
+      onQuit={() => setStep(4)}/>
       )}
     
     {step === 7 && (
@@ -70,6 +71,7 @@ function App(){
     score={finalScore} 
     category={category}
     onRestart={() => setStep(4)} // Optionnel: pour recommencer le jeu
+    onQuit={() => setStep(4)}
   />
 )}
     </div>

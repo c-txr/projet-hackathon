@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './Quiz.css'
 import Mascotte from './Mascotte';
 
-export default function Quiz({ questions, category, title, onFinish }) {
+export default function Quiz({ questions, category, title, onFinish, onQuit }) {
+
     /* La mémoire */
     const [index, setIndex] = useState(0); /* commence à la première question */
     const [score, setScore] = useState(0); /* commence à 0 pts */
@@ -54,7 +55,26 @@ export default function Quiz({ questions, category, title, onFinish }) {
    
     return (
         <div className='screen-content'>  
-            <header>
+            <header style={{ position: 'relative', width: '100%' }}>
+             {/* Le bouton quitter en haut à gauche */}
+            <button 
+                    onClick={() => {
+                        console.log("Le bouton Croix a été cliqué !");
+                        onQuit();
+                    }}
+                    style={{ 
+                        position: 'absolute', 
+                        left: '0', 
+                        top: '0', 
+                        background: 'none', 
+                        border: 'none', 
+                        fontSize: '1.5rem', 
+                        cursor: 'pointer',
+                        zIndex: 50 /* <-- On force le bouton à passer devant tout le reste */
+                    }}
+                >
+                    ✖️
+                </button>
                 <h1 className="main-title">WIKI LEARN</h1>
                 <h2 className="subtitle" style={{textTransform: 'capitalize'}}
                 >{category} : {title}</h2>
@@ -100,7 +120,7 @@ export default function Quiz({ questions, category, title, onFinish }) {
             })}
             {showXP && <div className="xp-float">+50 XP !</div>}
             <div className="progress-container">
-                <div class="progress-bar"
+                <div className="progress-bar"
                 style={{ width: `${progressWidth}%` }}
                 ></div>
             </div>
