@@ -43,7 +43,7 @@
     "questions": [
     {
         "question": "Quelle planète est connue comme la planète rouge ?",
-        "options": ["Vénus", "Mars", "Jupiter", "Neptune"],
+        "options": ["Vénus , Mars , Jupiter", "Neptune"],
         "correct": 1,
         "feedback": "Mars est connue comme la planète rouge."
     },
@@ -54,61 +54,62 @@
         "feedback": "Le système solaire est constitué de 8 planètes: Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune."
     },
      {
-        "question": "Comment s’appelle la galaxie dont fait partie le système solaire ?",
-        "options": ["La galaxie du Tourbillon", "Voie lactée", "Galaxie du Triangle"],
-        "correct": 1,
-        "feedback": ""
+        "question": "Comment s'appelle la galaxie dont fait partie le système solaire ?",
+        "options": ["La galaxie du Tourbillon", "La galaxie du Cercle", "La Voie Lactée", "La Galaxie du Triangle"],
+        "correct": 2,
+        "feedback": "Notre système solaire fait parti de la Voie Lactée"
     },
      {
-        "question": "Quelle est la deuxième planète géante gazeuse après Jupiter  ?",
-        "options": ["Saturne", "Neptune", "Mars"],
+        "question": "Quelle est la deuxième planète géante gazeuse après Jupiter",
+        "options": ["Saturne", "Neptune", "Mars", "Uranus"],
         "correct": 0,
-        "feedback": ""
+        "feedback": "Jupiter et Saturne sont les deux planètes gazeuse géantes de notre système solaire"
     },
      {
         "question": "Le système solaire comprends 4 planètes tellurique (Mercure, Vénus, la Terre et...",
-        "options": ["Neptune", "Mars", "Saturne"],
+        "options": ["Neptune", "Mars", "Jupiter", "Uranus"],
         "correct": 1,
-        "feedback": ""
+        "feedback": "Neptune est une planète géante de glace"
     }
     ]
 
 },
 "culture": {
     "id": "culture",
-    "title": "Eugène Delacroix",
-    "wikiTtitle": "Eugène_Delacroix",
+    "title": "Léonard de Vinci",
+    "wikiTtitle": "Léonard_de_Vinci",
     "questions": [
         {
-        "question": "En quelle année est né Eugène Delacroix ?",
-        "options": ["1790", "1798", "1965", "1985"],
+        "question": "Quelle est la date de naissance exacte de Léonard de Vinci selon notre calendrier actuel ?",
+        "options": ["15 avril 1452", "14 avril 1452", "2 mai 1519", "12 avril 1452"],
         "correct": 1,
-        "feedback": "Eugène Delacroix est est un peintre français né en 1798."
+        "feedback": "Léonard de Vinci est né le 14 avril 1452 de notre calendrier actuel. Le décalage entre le 14 et le 15 avril vient du passage du calendrier julien au calendrier grégorien."
     },
     {
-        "question": "A quel courant artistique appartient-il ?",
-        "options": ["Romantisme", "Impressionnisme", "Néo-classicisme", "Classicisme"],
-        "correct": 0,
-        "feedback": "Eugène Delacroix est considéré comme le principal représentant du Romantisme."
+        "question": "Dans quelle ville française Léonard de Vinci a-t-il terminé ses jours ?",
+        "options": ["Vinci", "Florence", "Paris", "Amboise"],
+        "correct": 3,
+        "feedback": "Léonard de Vinci est mort le 2 mai 1519 à Amboise. Il a passé ses trois dernières années au Clos Lucé, invité par le roi François Ier qui l'admirait."
     },
     {
-        "question": "En quelle année est mort Eugène Delacroix ?",
-        "options": ["1850", "1858", "1863", "1868"],
+        "question": "Le texte qualifie Léonard de polymathe. Que signifie ce terme dans ce contexte ?",
+        "options": ["Polyglotte", "Peintre unique", "Touche-à-tout", "Soldat d'élite"],
         "correct": 2,
-        "feedback": "Eugène Delacroix est décédé en 1863 à Paris."
+        "feedback": "C’est l'essence même du <Génie de la Renaissance> : ne pas avoir de frontières entre l'art et la science."
     },
     {
-        "question": "En quelle année a t-il participé au Salon ?",
-        "options": ["1824", "1830", "1832", "1835"],
-        "correct": 0,
-        "feedback": "C'est en 1824 qu'Eugène Delacroix a participé au Salon, où il s'est d'ailleurs fait remarquer."
+        "question": "Parmi ces métiers, lequel n'est PAS explicitement mentionné dans la liste de ses activités ?",
+        "options": ["Urbaniste", "Botaniste", "Explorateur", "Organisateur de spectacles"],
+        "correct": 2,
+        "feedback": "Bien qu'il ait voyagé entre l'Italie et la France, il était un observateur du monde plutôt qu'un explorateur de terres inconnues."
     },
     {
-        "question": "De quoi s’inspire ses oeuvres ?",
-        "options": ["De contes", "D’évènement passées", "De la mort", "De l'amour"],
+        "question": "À quelle période historique majeure Léonard de Vinci est-il rattaché ?",
+        "options": ["Le Moyen Âge classique", "La Renaissance italienne", "Le Siècle des Lumières", "La Belle Époque"],
         "correct": 1,
-        "feedback": "Eugène Delacroix produit des œuvres s'inspirant d'anecdotes historiques ou encore littéraires."
+        "feedback": "La Renaissance est marquée par un renouveau intellectuel et artistique dont Léonard est le symbole mondial."
     }
     ]
+
 }
 } 
