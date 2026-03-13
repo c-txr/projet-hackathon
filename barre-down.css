@@ -51,3 +51,14 @@ body {
     height: 120px;       /* Ajuste cette hauteur selon ton design Figma */
     border: 2px solid #1a1a1a;
 }
+.char-img {
+    width: 230px;
+    height: auto;
+    /* Animation de célébration fluide */
+    animation: celebrate 3s ease-in-out infinite;
+}
+
+@keyframes celebrate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}

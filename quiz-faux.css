@@ -1,0 +1,98 @@
+/* --- Mise en page globale --- */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* --- Cadre du téléphone --- */
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- Titre --- */
+.main-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: normal;
+}
+
+/* --- Visuels --- */
+.visual-container {
+    position: relative;
+    width: 100%;
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+}
+
+.mascot {
+    position: absolute;
+    width: 130px;
+    bottom: -45px;
+    right: -10px;
+    height: auto;
+    /* Animation de célébration fluide */
+    animation: celebrate 3s ease-in-out infinite;
+}
+
+@keyframes celebrate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
+/* --- Question --- */
+.question {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 40px 0;
+    color: #000;
+}
+
+/* --- Section des Réponses --- */
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espace entre les boutons */
+    width: 100%;
+    align-items: center;
+}
+
+.answer-btn {
+    width: 85%;
+    padding: 18px;
+    border-radius: 40px; /* Forme pilule */
+    border: 1px solid #000;
+    background-color: #fff;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Style pour l'erreur (Rouge/Rose) */
+.btn-error {
+    background-color: #FFB3B3; /* Rose/Rouge clair comme sur l'image */
+    color: #D32F2F; /* Texte rouge foncé pour la lisibilité */
+    border: 1px solid #D32F2F;
+}
+
+.answer-btn:hover {
+    transform: scale(1.02);
+}

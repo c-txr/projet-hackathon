@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000; /* FOND noir */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+}
+
+.app-viewport {
+    width: 402px;
+    height: 874px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* LE CADRE BLANC ÉPURÉ */
+.ecran-blanc {
+    background-color: #ffffff;
+    /* BORDURE NOIRE SUPPRIMÉE ICI */
+    border: none; 
+    
+    border-radius: 65px;
+    padding: 50px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    
+    /* Ombre légèrement plus marquée pour compenser l'absence de cadre */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    
+    /* Animation d'entrée fluide */
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.titre-principal {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sous-titre {
+    font-size: 22px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+/* --- ANIMATION MASCOTTE --- */
+.container-mascotte {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mascotte-roi {
+    width: 230px;
+    height: auto;
+    /* Animation de célébration fluide */
+    animation: celebrate 3s ease-in-out infinite;
+}
+
+@keyframes celebrate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
+/* --- TEXTE DE RÉUSSITE --- */
+.xp-text {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.message {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}

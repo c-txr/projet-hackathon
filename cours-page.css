@@ -34,7 +34,16 @@ body {
 .mini-char {
     width: 80px;
     height: auto;
+    height: auto;
+    /* Animation de célébration fluide */
+    animation: celebrate 3s ease-in-out infinite;
 }
+
+@keyframes celebrate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
 
 /* Conteneur des boutons avec scroll si besoin */
 .cta-container {

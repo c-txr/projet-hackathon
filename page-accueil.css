@@ -34,7 +34,16 @@ body {
     text-align: center;
     position: relative;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+    height: auto;
+/* Animation de célébration fluide */
+    animation: celebrate 3s ease-in-out infinite;
 }
+
+@keyframes celebrate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
 
 .speech-bubble p {
     margin: 0;
