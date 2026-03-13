@@ -1,0 +1,115 @@
+{
+"histoire": {
+  "id": "histoire",
+  "title": "La Dynastie Tudor",
+  "wikiTitle": "Période_Tudor",
+  "questions": [
+    {
+      "question": "Qui est le premier monarque de l’époque Tudor  ?",
+      "options": ["Henri VII", "Henri VIII", "Edward VI", "Elizabeth Iere"],
+      "correct": 0,
+      "feedback": "C'est bien Henri VII qui est le premier monarque de l'époque Tudor."
+    },
+    {
+      "question": "Quelle bataille a marqué le début de la dynastie Tudor en 1485 ?",
+      "options": ["Bataille d'Hastings", "Bataille des Deux Roses ", "Bataille de Marignan", "Bataille d'Azincourt"],
+      "correct": 1,
+      "feedback": "Il y en a eu 5 : Henri VII, Henri VIII, Édouard VI, Marie Ière et Élisabeth Ière."
+    },
+    {
+     "question": "Avec qui Henri VII se marie ?",
+      "options": ["Elizabeth d'York", "Lady Jane Grey", "Marie Boleyn", "Marie Stuart"],
+      "correct": 0,
+      "feedback": "Henri VII épouse Elizabeth d'York et ils forment ainsi l'emblême de la Rose Tudor."
+    },
+    {
+      "question": "Quand est-ce que se termine la période Tudor ?",
+      "options": ["1600", "1603", "1605", "1610"],
+      "correct": 1,
+      "feedback": "En effet, la période Tudor s'étend de 1485 à 1603."
+    },
+    {
+      "question": "Quelle reine Tudor a mis fin à la dynastie car elle n'avait pas d'héritier ?",
+      "options": ["Marie Stuart", "Marie Ière", "Élisabeth Ière", "Anne Boleyn"],
+      "correct": 2,
+      "feedback": "Élisabeth Ière, la 'Reine Vierge', est la dernière des Tudor."
+    }
+  ] 
+},
+"science": {
+    "id": "science",
+    "title": "Le système solaire",
+    "wikiTitle": "Système_solaire",
+    "questions": [
+    {
+        "question": "Quelle planète est connue comme la planète rouge ?",
+        "options": ["Vénus , Mars , Jupiter", "Neptune"],
+        "correct": 1,
+        "feedback": "Mars est connue comme la planète rouge."
+    },
+    {
+        "question": "Combien de planètes constitue le système solaire ?",
+        "options": ["7", "12", "8", "5"],
+        "correct": 2,
+        "feedback": "Le système solaire est constitué de 8 planètes: Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune."
+    },
+     {
+        "question": "",
+        "options": [""],
+        "correct":,
+        "feedback": ""
+    },
+     {
+        "question": "",
+        "options": [""],
+        "correct":,
+        "feedback": ""
+    },
+     {
+        "question": "",
+        "options": [""],
+        "correct":,
+        "feedback": ""
+    }
+    ]
+
+},
+"culture": {
+    "id": "culture",
+    "title": "Eugène Delacroix",
+    "wikiTtitle": "Eugène_Delacroix",
+    "questions": [
+        {
+        "question": "En quelle année est né Eugène Delacroix ?",
+        "options": ["1790", "1798", "1965", "1985"],
+        "correct": 1,
+        "feedback": "Eugène Delacroix est est un peintre français né en 1798."
+    },
+    {
+        "question": "A quel courant artistique appartient-il ?",
+        "options": ["Romantisme", "Impressionnisme", "Néo-classicisme", "Classicisme"],
+        "correct": 0,
+        "feedback": "Eugène Delacroix est considéré comme le principal représentant du Romantisme."
+    },
+    {
+        "question": "En quelle année est mort Eugène Delacroix ?",
+        "options": ["1850", "1858", "1863", "1868"],
+        "correct": 2,
+        "feedback": "Eugène Delacroix est décédé en 1863 à Paris."
+    },
+    {
+        "question": "En quelle année a t-il participé au Salon ?",
+        "options": ["1824", "1830", "1832", "1835"],
+        "correct": 0,
+        "feedback": "C'est en 1824 qu'Eugène Delacroix a participé au Salon, où il s'est d'ailleurs fait remarquer."
+    },
+    {
+        "question": "De quoi s’inspire ses oeuvres ?",
+        "options": ["De contes", "D’évènement passées", "De la mort", "De l'amour"],
+        "correct": 1,
+        "feedback": "Eugène Delacroix produit des œuvres s'inspirant d'anecdotes historiques ou encore littéraires."
+    }
+    ]
+
+}
+} 
