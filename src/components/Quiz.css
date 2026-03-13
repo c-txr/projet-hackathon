@@ -99,3 +99,37 @@ body {
     background-color: #3B66CC;
     border-radius: 10px;
 }
+
+/* --- LE NOUVEAU XP BONUS --- */
+.xp-bonus {
+    display: block; /* Prend toute la largeur pour le centrer */
+    text-align: center; /* Centre le texte */
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #2ecc71; 
+    margin-bottom: 5px; /* Petit espace avant la barre */
+    pointer-events: none; /* Ne bloque pas le clic */
+    /* Ralentissement de l'animation : 2.5s au lieu de 1.2s */
+    animation: slowFadeAndRise 2.5s ease-out forwards;
+}
+
+/* --- LA NOUVELLE ANIMATION MOINS FURTIVE --- */
+@keyframes slowFadeAndRise {
+    0% {
+        transform: translateY(10px); /* Il part d'un peu plus bas */
+        opacity: 0;
+    }
+    15% {
+        opacity: 1; /* Il devient visible vite pour en profiter */
+        transform: translateY(0);
+    }
+    60% {
+        opacity: 1; /* Il reste visible longtemps ! */
+        transform: translateY(-5px); /* Il monte doucement */
+    }
+    100% {
+        transform: translateY(-20px); /* Il finit sa course plus haut */
+        opacity: 0; /* Et disparaît en douceur */
+    }
+}
+
