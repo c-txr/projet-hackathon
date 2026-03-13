@@ -41,3 +41,29 @@
     color: #1a1a1a;
     margin: 0;
 }
+/* --- Bouton Profil en haut à droite --- */
+.profile-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    background-color: #3366CC;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Plus arrondi pour englober l'image */
+    cursor: pointer;
+    z-index: 50;
+    display: flex; /* Aligne l'image et le texte sur la même ligne */
+    align-items: center; /* Centre verticalement */
+    gap: 8px; /* Espace entre la mascotte et le texte */
+    font-weight: bold;
+}
+
+/* --- L'image de la mascotte dans le bouton --- */
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    background-color: white; /* Fond blanc pour bien voir la mascotte */
+    border-radius: 50%; /* Rend le fond blanc parfaitement rond */
+    object-fit: contain; /* Empêche l'image de se déformer */
+}

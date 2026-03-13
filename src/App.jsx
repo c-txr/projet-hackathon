@@ -60,7 +60,9 @@ function App(){
         onSelect={(t) => { 
         setCategory(t); 
         setStep(5); 
-      }} />
+      }} 
+      onOpenProfile={() => setStep(8)}
+      />
     )}
 
     {/* 5ème page: le cours via l'API*/}

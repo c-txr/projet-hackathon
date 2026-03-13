@@ -1,8 +1,12 @@
 import './ThemeChoice.css'
 
-export default function ThemeChoice({pseudo, onSelect }) {
+export default function ThemeChoice({ pseudo, onSelect, onOpenProfile }) {
   return (
     <div className="screen-content">
+      <button className="profile-btn" onClick={onOpenProfile}>
+        <img src="/assets/mascotte.png" alt="Mascotte Profil" className="profile-icon" />
+        Profil
+      </button>
       <h1 className="selection-title">{pseudo}, par quoi souhaites-tu commencer?</h1>
       
       <div className="categories-list">
