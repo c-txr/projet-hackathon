@@ -18,7 +18,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    overscroll-behavior-y: none;
+    position: fixed;
     margin: 0;
     font-family: 'Georgia', serif;
     overflow: hidden;
@@ -34,7 +37,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-     padding: max(70px, env(safe-area-inset-top)) 20px 2vh 20px;
+    padding: max(5px, env(safe-area-inset-top)) 20px 2vh 20px;
 
     box-sizing: border-box;
     text-align: center;
@@ -84,5 +87,6 @@ body {
         max-height: 35vh !important;
         width: auto !important;
         object-fit: contain !important;
+        position: relative !important;
     }
 }
