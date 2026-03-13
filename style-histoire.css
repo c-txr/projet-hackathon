@@ -5,17 +5,17 @@
 }
 
 body {
-    background-color: #ebedf2; /* FOND GRIS */
+    background-color: #000000; /* FOND noir */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Times New Roman', serif;
+    font-family: 'Georgia', serif;
 }
 
 .app-viewport {
-    width: 360px;
-    height: 750px;
+    width: 402px;
+    height: 874px;
     display: flex;
     flex-direction: column;
     justify-content: center;
