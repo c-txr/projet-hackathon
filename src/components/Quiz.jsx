@@ -14,7 +14,7 @@ export default function Quiz({ questions, category, title, onFinish }) {
     const categoryAssets = {
     "histoire": "/assets/tudors-image.png",
     "science": "/assets/science.png",
-    "culture": "/assets/culture-museum.png"
+    "culture": "/assets/leonardvinci.png"
 };
 
     const progressWidth = ((index + 1) / questions.length) * 100;
