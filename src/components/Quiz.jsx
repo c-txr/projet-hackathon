@@ -25,7 +25,7 @@ export default function Quiz({ questions, category, title, onFinish }) {
         const isCorrect = selectedIndex === currentQ.correct;
 
         const pointsGagnes = isCorrect ? 50 : 0;
-    // On crée une variable qui contient le score TOTAL réel
+    /* On crée une variable qui contient le score total réel */
      const scoreFinalCalculé = score + pointsGagnes;
 
         if (isCorrect) {
