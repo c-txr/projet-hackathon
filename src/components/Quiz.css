@@ -30,12 +30,21 @@ body {
 /* --- Visuels --- */
 .visual-container { position: relative; width: 100%; }
 .main-img { width: 100%; border-radius: 5px; border: 1px solid #ddd; }
-.mascot { 
+.mascot {
     position: absolute; 
     width: 80px; 
     bottom: -20px; 
     right: -5px; 
+/* Animation de célébration fluide */
+    animation: celebrate 3s ease-in-out infinite;
 }
+
+
+@keyframes celebrate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
 
 /* --- Question --- */
 .question {

@@ -18,7 +18,7 @@
     text-align: center;
     position: relative;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-    /* Animation de célébration fluide */
+/* Animation de célébration fluide */
     animation: celebrate 3s ease-in-out infinite;
 }
 

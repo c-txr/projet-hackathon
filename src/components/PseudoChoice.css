@@ -1,4 +1,32 @@
 /* image du personnage */
+/* Base commune */
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* --- ANIMATIONS --- */
+
+/* Animation de flottement pour la mascotte */
+@keyframes floatMascot {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Animation de pulsation au survol */
+@keyframes pulseMascot {
+    0% { transform: scale(1) translateY(-7.5px); }
+    50% { transform: scale(1.05) translateY(-7.5px); }
+    100% { transform: scale(1) translateY(-7.5px); }
+}
+
+/* Image du personnage */
 .header-image {
     margin-top: 30px;
 }
@@ -6,6 +34,20 @@
 .char-img {
     width: 200px;
     height: auto;
+<<<<<<< HEAD
+=======
+    position: relative;
+    /* Application de l'animation de flottement par défaut */
+    animation: floatMascot 3s ease-in-out infinite;
+    transition: filter 0.3s ease;
+}
+
+/* Effet au survol de la mascotte */
+.char-img:hover {
+    animation: pulseMascot 0.8s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+>>>>>>> 60cd8161bd58a16c7a45c8125a76c618f81a9a5d
 }
 
 /* la carte blanche arrondie */
@@ -51,7 +93,7 @@
     border-radius: 25px;
     border: 1px solid #1a1a1a;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .btn-validate:hover {
