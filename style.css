@@ -11,3 +11,22 @@
     --ui-grey: #EAECF0;
     --wiki-blue: #3366CC;
 }
+/* --- LE CADRE 100% MOBILE NÉTOYÉ --- */
+.iphone-frame, .phone-frame {
+    width: 100vw;       /* 100% de la largeur de l'écran EXACTE du téléphone */
+    height: 100dvh;     /* 100% de la hauteur dynamique (ignore la barre Safari) */
+    background-color: var(--bg-main); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Interdit le débordement sur les côtés */
+    overflow-y: auto;   /* Permet de scroller de haut en bas si besoin */
+    
+    /* On enlève TOUTES les fausses bordures et arrondis */
+    border: none;
+    border-radius: 0;
+    max-width: none; 
+    box-shadow: none;
+    margin: 0;
+}
