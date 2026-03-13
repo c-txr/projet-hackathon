@@ -54,21 +54,21 @@
         "feedback": "Le système solaire est constitué de 8 planètes: Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune."
     },
      {
-        "question": "",
-        "options": [""],
-        "correct":,
+        "question": "Comment s’appelle la galaxie dont fait partie le système solaire ?",
+        "options": ["La galaxie du Tourbillon", "Voie lactée", "Galaxie du Triangle", "Le Trou noir"],
+        "correct": 1,
         "feedback": ""
     },
      {
-        "question": "",
-        "options": [""],
-        "correct":,
+        "question": "Quelle est la deuxième planète géante gazeuse après Jupiter  ?",
+        "options": ["Saturne", "Neptune", "Mars", "Mercure"],
+        "correct": 0,
         "feedback": ""
     },
      {
-        "question": "",
-        "options": [""],
-        "correct":,
+        "question": "Le système solaire comprends 4 planètes tellurique (Mercure, Vénus, la Terre et...",
+        "options": ["Neptune", "Mars", "Saturne", "Jupiter"],
+        "correct": 1,
         "feedback": ""
     }
     ]
@@ -76,8 +76,8 @@
 },
 "culture": {
     "id": "culture",
-    "title": "Eugène Delacroix",
-    "wikiTtitle": "Eugène_Delacroix",
+    "title": "Léonard de Vinci",
+    "wikiTtitle": "Léonard_De_Vinci",
     "questions": [
         {
         "question": "En quelle année est né Eugène Delacroix ?",

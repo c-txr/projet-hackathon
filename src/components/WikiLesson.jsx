@@ -9,7 +9,7 @@ export default function WikiLesson({ theme, onReady }) {
         const wikiTitles = {
             histoire: "Période_Tudor",
             science: "Système_solaire",
-            culture: "Eugène_Delacroix"
+            culture: "Léonard_De_Vinci"
         };
 
        /* on récupère le bon titre ou on utilise le thème par défaut */
@@ -43,7 +43,7 @@ export default function WikiLesson({ theme, onReady }) {
         </header>
         <main className="course-content">
              {lesson?.thumbnail && (
-                <img src={lesson.thumbnail.source} width="100" alt="illustration" />
+                <img src={lesson.thumbnail.source} width="130" alt="illustration" />
             )}
           <p>{lesson?.extract || "Oups, aucun résumé trouvé..."}</p>
         </main>

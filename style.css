@@ -13,24 +13,39 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--bg-main);
+    color: var(--text-main);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: 'Georgia', serif;
+    overflow: hidden;
+    
 }
-.phone-frame {
-    width: 402px;
-    height: 874px;
-    background-color: #fff;
-    border-radius: 40px;
-    padding: 25px 20px;
+.iphone-frame, .phone-frame {
+    width: 100vw;
+    height: 100dvh;
+    background-color: var(--bg-main);
+
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8vh 20px 5vh 20px;
+
     box-sizing: border-box;
     text-align: center;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 0;
+    max-width: none; 
+    box-shadow: none;
+    margin: 0;
 }
+  
+  
+
+  
