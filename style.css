@@ -31,10 +31,10 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
-    padding: 8vh 20px 5vh 20px;
+    padding: 4vh 20px 2vh 20px;
 
     box-sizing: border-box;
     text-align: center;
@@ -49,16 +49,9 @@ body {
    MODE IPAD & DESKTOP 
 ========================================= */
 @media (min-width: 768px) {
-    body {
-        background-color: var(--ui-grey);
-        /* On s'assure que le body prend tout l'écran comme base */
-        min-height: 100vh;
-        position: relative;
-        margin: 0;
-    }
-
+    
     /* Le Boss : On force TOUTES les pages à s'empiler au centre exact de l'écran */
-    .iphone-frame, .phone-frame, .screen-content {
+    .screen-content {
         /* Dimensions du téléphone */
         width: 480px !important;
         height: 900px !important;
@@ -81,8 +74,8 @@ body {
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-evenly !important;
-        overflow-y: auto !important;
-        padding: 80px 30px 60px 30px !important;
+        overflow-y: hidden !important;
+        padding: 40px 30px 40px 30px !important;
         margin: 0 !important;
     }
 
