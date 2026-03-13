@@ -43,7 +43,7 @@
     "questions": [
     {
         "question": "Quelle planète est connue comme la planète rouge ?",
-        "options": ["Vénus , Mars , Jupiter", "Neptune"],
+        "options": ["Vénus", "Mars", "Jupiter", "Neptune"],
         "correct": 1,
         "feedback": "Mars est connue comme la planète rouge."
     },
