@@ -39,6 +39,14 @@ body {
     text-align: center;
     position: relative;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+    /* Animation de célébration fluide */
+    animation: celebrate 3s ease-in-out infinite;
+}
+
+
+@keyframes celebrate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
 }
 
 .speech-bubble p {
@@ -46,7 +54,7 @@ body {
     font-size: 22px;
     line-height: 1.2;
     color: #1a1a1a;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', serif;
 }
 
 
@@ -81,6 +89,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 24px;
+    font-family:'Georgia', serif;
     font-style: normal;
     padding: 12px 45px;
     border-radius: 30px;
