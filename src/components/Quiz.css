@@ -71,6 +71,18 @@ body {
     transform: scale(1.02);
 }
 
+.answer-btn.correct{
+    background-color: #2ecc71 !important; 
+    border-color: #27ae60 !important;
+    color: white !important;
+    box-shadow: 0 4px 0 #1e8449 !important;
+}
+.answer-btn.incorrect {
+    background-color: #e74c3c !important; 
+    border-color: #c0392b !important;
+    color: white !important;
+    box-shadow: 0 4px 0 #922b21 !important;
+}
 
 /* --- Barre de progression --- */
 .progress-container {

@@ -9,8 +9,8 @@ export default function Quiz({ questions, onFinish }) {
     const [fini, setFini] = useState(false); /* jeu terminé ? */
     const [mood, setMood] = useState('neutre'); /*humeur de la mascotte, neutre par défaut*/
     const [selectedAnswer, setSelectedAnswer] = useState(null);
-    const progressWidth = ((index + 1) / questions.length) * 100;
 
+    const progressWidth = ((index + 1) / questions.length) * 100;
     const currentQ = questions[index]; 
 
     const handleAnswer = (selectedIndex) => {
@@ -24,11 +24,16 @@ export default function Quiz({ questions, onFinish }) {
             setMood('error');
         }
 
-        if (index + 1 < questions.length){ /* vérif si il reste des questions */
-            setIndex(index +1);
-        } else {
-            setFini(true);
-        }
+      setTimeout(() => {
+            setSelectedAnswer(null); // On réinitialise le bouton
+            setMood('idle');         // La mascotte se calme
+
+            if (index + 1 < questions.length) {
+                setIndex(index + 1);
+            } else {
+                setFini(true);
+            }
+        }, 1500);
     };
 
     if (fini){
@@ -43,17 +48,40 @@ export default function Quiz({ questions, onFinish }) {
             </header>
             {/*<Mascotte mood={mood}/>*/}
             <div className="visual-container">
-                <img src="tudors-image.png" alt="Portraits Tudors" className="main-img"/>
-                <img src="/assets/mascotte-cheerleader.png" alt="Wiki Mascotte" className="mascot"/>
+                <img src="/assets/tudors-image.png" alt="Portraits Tudors" className="main-img"/>
+                <img 
+                    src={
+                        mood === 'success' ? "/assets/mascotte-cheerleader.png":
+                        mood === 'error' ? "/assets/cheerleader-sad.png":
+                        "/assets/teaching.png"
+                     } 
+                     alt="Wiki Mascotte" 
+                     className={`mascot ${mood}`}
+                     />
             </div> 
             <h2 className="question">{currentQ.question}</h2>
+
             <div className="answers-container">
-            {currentQ.options.map((option, i) =>  (
-                <button className="answer-container answer-btn {buttonClass}"
-                key={i} onClick={() => handleAnswer(i)}>
-                    {option}
-                </button>
-            ))}
+            {currentQ.options.map((option, i) =>  {
+                let buttonClass = "";
+                if (selectedAnswer !== null){
+                    if (i === currentQ.correct){
+                        buttonClass = "correct"; /* bouton en vert */
+                    } else if (i === selectedAnswer) {
+                        buttonClass = "incorrect"; /* bouton en rouge */
+                    }
+                }
+                return(
+                    <button 
+                        key={i}
+                        className={`answer-btn ${buttonClass}`}
+                        onClick={() => handleAnswer(i)}
+                        disabled={selectedAnswer !== null}>
+                            {option}
+                        </button>
+
+                );
+            })}
             <div class="progress-container">
                 <div class="progress-bar"
                 style={{ width: `${progressWidth}%` }}
