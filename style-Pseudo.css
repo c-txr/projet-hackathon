@@ -1,110 +1,88 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Base commune */
 body {
-    background-color: #ebedf2;
+    background-color: #1a1a1a;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
 }
 
-.app-viewport {
-    width: 360px;
-    height: 750px;
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #E9ECF3; /* Fond gris clair bleuté */
+    border-radius: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    padding: 20px;
+    align-items: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-/* Animation de flottement pour la mascotte */
-.header {
-    text-align: center;
+/* Image du personnage */
+.header-image {
     margin-bottom: 30px;
 }
 
-.mascotte {
-    width: 150px;
+.char-img {
+    width: 200px;
     height: auto;
-    animation: float 4s ease-in-out infinite;
+    position: relative;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Cadre blanc avec effet de profondeur doux */
-.login-card {
-    background-color: #ffffff;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 60px;
-    padding: 50px 30px;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    /* Animation d'apparition fluide */
-    animation: fadeIn 0.8s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-label {
-    display: block;
-    font-size: 22px;
-    margin-bottom: 25px;
-    font-weight: 600;
-    color: #333;
-}
-
-/* Input fluide avec changement de couleur au focus */
-.input-pseudo {
+/* La carte blanche arrondie */
+.selection-card {
+    background-color: white;
     width: 100%;
-    padding: 18px;
-    border-radius: 40px;
-    border: 2px solid transparent;
-    background-color: #f0f2f5;
-    margin-bottom: 30px;
-    outline: none;
-    font-size: 18px;
-    text-align: center;
-    transition: all 0.3s ease;
+    padding: 40px 20px;
+    border-radius: 60px; /* Très arrondi comme sur l'image */
+    border: 2px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.input-pseudo:focus {
-    background-color: #fff;
-    border-color: #4472c4;
-    box-shadow: 0 5px 15px rgba(68, 114, 196, 0.2);
+.form-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    font-weight: normal;
 }
 
-/* Bouton bleu avec effet de survol dynamique */
-.btn-bleu {
-    background-color: #4472c4;
-    color: white;
-    border: none;
+/* Style du champ de saisie (Input) */
+.pseudo-input {
+    width: 100%;
+    height: 60px;
     border-radius: 30px;
-    padding: 15px 50px;
-    font-size: 18px;
-    font-weight: bold;
+    border: 2px solid #1a1a1a;
+    background-color: #f0f0f0;
+    padding: 0 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+}
+
+/* Le bouton bleu Valider */
+.btn-validate {
+    background-color: #3B66CC;
+    color: white;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    padding: 10px 50px;
+    border-radius: 25px;
+    border: 1px solid #1a1a1a;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(68, 114, 196, 0.3);
-    transition: all 0.3s ease;
+    transition: transform 0.2s;
 }
 
-.btn-bleu:hover {
-    background-color: #355da8;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(68, 114, 196, 0.4);
-}
-
-.btn-bleu:active {
-    transform: scale(0.95);
+.btn-validate:hover {
+    transform: scale(1.05);
+    background-color: #2a4e9b;
 }
