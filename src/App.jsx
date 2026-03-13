@@ -10,22 +10,25 @@ import Resultpage from './components/ResultPage'
 
 
 function App(){
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(1); /* numéro de la page actuelle */
   const [userName, setUserName] = useState(""); /* pour stocker le pseudo */
-  const [category, setCategory] = useState('histoire'); /* rien n'est choisi par défaut */
-  const [finalScore, setFinalScore] = useState(0);
+  const [category, setCategory] = useState('histoire'); /* retient le thème choisi */
+  const [finalScore, setFinalScore] = useState(0); /* enregistre les pts gagnés à la fin du quiz*/
 
   return (
     <div className='App'>
       <div className='phone-frame'>
+
       {/* 1ère page: la loading page*/}
-      {step === 1 && (
-        <LandingPage onNext={() => setStep(2)} />
+      {step === 1 && (                 /* si step 1 --> affiche LandingPage*/
+        <LandingPage onNext={() => setStep(2)} /> /* passe à la page suivante*/
       )}
+
     {/* 2ème page: l'accueil'*/}
     {step === 2 && (
       <Accueil onNext={() => setStep(3)} />
     )}
+
     {/* 3ème page: l'utilisateur choisit son pseudo*/}
     {step === 3 && (
       <PseudoChoice onNext={(name) => {
@@ -33,6 +36,7 @@ function App(){
         setStep(4);
       }} />
     )}
+
     {/* 4ème page: l'utilisateur choisit son thème*/}
     {step === 4 && (
       <ThemeChoice
@@ -42,12 +46,14 @@ function App(){
         setStep(5); 
       }} />
     )}
+
     {/* 5ème page: le cours via l'API*/}
     {step === 5 && (
       <WikiLesson theme={category} onReady={() => 
       setStep(6)
       } />
     )}
+
     {/*6ème page: le quiz*/}
     {step === 6 && (
       <Quiz questions={quizData[category].questions}
@@ -63,15 +69,13 @@ function App(){
   <Resultpage 
     score={finalScore} 
     category={category}
-    onRestart={() => setStep(2)} // Optionnel: pour recommencer le jeu
+    onRestart={() => setStep(4)} // Optionnel: pour recommencer le jeu
   />
 )}
     </div>
   </div>
 )
 }
+
 export default App
 
-/*
-<Quiz questions={quizData.histoire.questions} />
-    <Quiz questions={quizData.science.questions}/>*/

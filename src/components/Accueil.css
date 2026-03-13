@@ -7,13 +7,13 @@
     padding: 50px 25px;
     box-sizing: border-box;
 }
-/* La Bulle de texte (Speech Bubble) */
+
 .speech-bubble {
     width : 300px;
     height: auto;
     background: white;
     border: 4px solid #1a1a1a;
-    border-radius: 50% / 50%; /* Forme ovale */
+    border-radius: 50%;
     padding: 40px;
     text-align: center;
     position: relative;
@@ -66,10 +66,8 @@
 .btn-primary {
     background-color: var(--wiki-blue);
     color: white;
-    text-decoration: none;
     font-size: 24px;
     font-family:'Georgia', serif;
-    font-style: normal;
     padding: 12px 45px;
     border-radius: 30px;
     border: 1px solid #1a1a1a;
