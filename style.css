@@ -45,7 +45,51 @@ body {
     box-shadow: none;
     margin: 0;
 }
-  
-  
+/* =========================================
+   MODE IPAD & DESKTOP 
+========================================= */
+@media (min-width: 768px) {
+    body {
+        background-color: var(--ui-grey);
+        /* On s'assure que le body prend tout l'écran comme base */
+        min-height: 100vh;
+        position: relative;
+        margin: 0;
+    }
 
-  
+    /* Le Boss : On force TOUTES les pages à s'empiler au centre exact de l'écran */
+    .iphone-frame, .phone-frame, .screen-content {
+        /* Dimensions du téléphone */
+        width: 480px !important;
+        height: 900px !important;
+        max-height: 90vh !important;
+        
+        /* Design du téléphone */
+        border-radius: 40px !important;
+        border: 12px solid #1a1a1a !important;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2) !important;
+        background-color: var(--bg-main) !important;
+        
+        /* L'ARME FATALE : Centrage absolu */
+        /* S'il y a des clones, ils seront invisibles car empilés exactement au même endroit */
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        
+        /* On protège le contenu à l'intérieur pour qu'il ne disparaisse pas */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        overflow-y: auto !important;
+        padding: 80px 30px 60px 30px !important;
+        margin: 0 !important;
+    }
+
+    /* On bride les images rebelles */
+    .main-img, .visual-container img, .main-image {
+        max-height: 35vh !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+}
