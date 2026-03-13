@@ -56,7 +56,7 @@ const catKey = category.toLowerCase();
             src={result.img} 
             alt={result.badge} 
             className="mascotte-resultat-finale"
-            loading="lazy" 
+            loading="lazy"
           />
         </div>
 

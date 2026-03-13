@@ -61,8 +61,8 @@ export default function Quiz({ questions, category, title, onFinish }) {
             </header>
             {/*<Mascotte mood={mood}/>*/}
             <div className="visual-container">
-                <img src={categoryAssets[category]} alt="Portraits Tudors" className="main-img"/>
-                loading="lazy"
+                <img src={categoryAssets[category]} alt="Portraits Tudors" className="main-img" loading="lazy"/>
+                
                 <img 
                     src={
                         mood === 'success' ? "/assets/mascotte-cheerleader.png":
