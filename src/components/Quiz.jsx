@@ -13,7 +13,7 @@ export default function Quiz({ questions, category, title, onFinish }) {
     
     const categoryAssets = {
     "histoire": "/assets/tudors-image.png",
-    "science": "/assets/science.png",
+    "science": "/assets/science.jpg",
     "culture": "/assets/leonardvinci.png"
 };
 
