@@ -55,7 +55,8 @@ const catKey = category.toLowerCase();
           <img 
             src={result.img} 
             alt={result.badge} 
-            className="mascotte-resultat-finale" 
+            className="mascotte-resultat-finale"
+            loading="lazy" 
           />
         </div>
 
@@ -64,10 +65,10 @@ const catKey = category.toLowerCase();
           <p className="message">
             {result.texte}
           </p>
-          
+
           {/* Bouton indispensable pour revenir au menu */}
           <button className="btn-primary" onClick={onRestart}>
-             CONTINUER
+            CONTINUER
           </button>
         </footer>
 
