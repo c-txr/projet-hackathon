@@ -12,10 +12,10 @@ export default function WikiLesson({ theme, onReady }) {
             culture: "Eugène_Delacroix"
         };
 
-        // On récupère le bon titre ou on utilise le thème par défaut
+       /* on récupère le bon titre ou on utilise le thème par défaut */
         const title = wikiTitles[theme] || theme;
 
-        // 2. On lance l'appel à l'API
+        /* On lance l'appel à l'API */
         setLoading(true);
         fetch(`https://fr.wikipedia.org/api/rest_v1/page/summary/${title}`)
             .then(response => response.json())
@@ -28,16 +28,15 @@ export default function WikiLesson({ theme, onReady }) {
                 console.error("Erreur API:", error);
                 setLoading(false);
             });
-    }, [theme]); // Le useEffect se relance si le thème change
+    }, [theme]); // le useEffect se relance si le thème change
 
-    // 3. Écran de chargement
+    /* écran de chargement */
     if (loading) return <div className="loading">Chargement du savoir... 🧠</div>;
 
 
 
   return (
     <div className="screen-content">
-      {/* Ici tu pourras mettre ta logique Fetch Wikipedia plus tard */}
         <header className="course-header">
           <h1 className="main-title">WIKI LEARN</h1>
           <h2 className="subtitle">Apprends-en plus sur: {lesson?.title}</h2>

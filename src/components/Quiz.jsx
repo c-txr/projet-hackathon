@@ -10,6 +10,7 @@ export default function Quiz({ questions, category, title, onFinish }) {
     const [mood, setMood] = useState('neutre'); /*humeur de la mascotte, neutre par défaut*/
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [showXP, setShowXP] = useState(false);
+    
     const categoryAssets = {
     "histoire": "/assets/tudors-image.png",
     "science": "/assets/science.png",
