@@ -1,0 +1,115 @@
+{
+"histoire": {
+  "id": "histoire",
+  "title": "La Dynastie Tudor",
+  "wikiTitle": "Période_Tudor",
+  "questions": [
+    {
+      "question": "Qui est le premier monarque de l’époque Tudor  ?",
+      "options": ["Henri VII", "Henri VIII", "Edward VI", "Elizabeth Iere"],
+      "correct": 0,
+      "feedback": "C'est bien Henri VII qui est le premier monarque de l'époque Tudor."
+    },
+    {
+      "question": "Quelle bataille a marqué le début de la dynastie Tudor en 1485 ?",
+      "options": ["Bataille d'Hastings", "Bataille des Deux Roses ", "Bataille de Marignan", "Bataille d'Azincourt"],
+      "correct": 1,
+      "feedback": "Il y en a eu 5 : Henri VII, Henri VIII, Édouard VI, Marie Ière et Élisabeth Ière."
+    },
+    {
+     "question": "Avec qui Henri VII se marie ?",
+      "options": ["Elizabeth d'York", "Lady Jane Grey", "Marie Boleyn", "Marie Stuart"],
+      "correct": 0,
+      "feedback": "Henri VII épouse Elizabeth d'York et ils forment ainsi l'emblême de la Rose Tudor."
+    },
+    {
+      "question": "Quand est-ce que se termine la période Tudor ?",
+      "options": ["1600", "1603", "1605", "1610"],
+      "correct": 1,
+      "feedback": "En effet, la période Tudor s'étend de 1485 à 1603."
+    },
+    {
+      "question": "Quelle reine Tudor a mis fin à la dynastie car elle n'avait pas d'héritier ?",
+      "options": ["Marie Stuart", "Marie Ière", "Élisabeth Ière", "Anne Boleyn"],
+      "correct": 2,
+      "feedback": "Élisabeth Ière, la 'Reine Vierge', est la dernière des Tudor."
+    }
+  ] 
+},
+"science": {
+    "id": "science",
+    "title": "Le système solaire",
+    "wikiTitle": "Système_solaire",
+    "questions": [
+    {
+        "question": "Quelle planète est connue comme la planète rouge ?",
+        "options": ["Vénus , Mars , Jupiter", "Neptune"],
+        "correct": 1,
+        "feedback": "Mars est connue comme la planète rouge."
+    },
+    {
+        "question": "Combien de planètes constitue le système solaire ?",
+        "options": ["7", "12", "8", "5"],
+        "correct": 2,
+        "feedback": "Le système solaire est constitué de 8 planètes: Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune."
+    },
+     {
+        "question": "Comment s'appelle la galaxie dont fait partie le système solaire ?",
+        "options": ["La galaxie du Tourbillon", "La galaxie du Cercle", "La Voie Lactée", "La Galaxie du Triangle"],
+        "correct": 2,
+        "feedback": "Notre système solaire fait parti de la Voie Lactée"
+    },
+     {
+        "question": "Quelle est la deuxième planète géante gazeuse après Jupiter",
+        "options": ["Saturne", "Neptune", "Mars", "Uranus"],
+        "correct": 0,
+        "feedback": "Jupiter et Saturne sont les deux planètes gazeuse géantes de notre système solaire"
+    },
+     {
+        "question": "Le système solaire comprends 4 planètes tellurique (Mercure, Vénus, la Terre et...",
+        "options": ["Neptune", "Mars", "Jupiter", "Uranus"],
+        "correct": 1,
+        "feedback": "Neptune est une planète géante de glace"
+    }
+    ]
+
+},
+"culture": {
+    "id": "culture",
+    "title": "Léonard de Vinci",
+    "wikiTtitle": "Léonard_de_Vinci",
+    "questions": [
+        {
+        "question": "Quelle est la date de naissance exacte de Léonard de Vinci selon notre calendrier actuel ?",
+        "options": ["15 avril 1452", "14 avril 1452", "2 mai 1519", "12 avril 1452"],
+        "correct": 1,
+        "feedback": "Léonard de Vinci est né le 14 avril 1452 de notre calendrier actuel. Le décalage entre le 14 et le 15 avril vient du passage du calendrier julien au calendrier grégorien."
+    },
+    {
+        "question": "Dans quelle ville française Léonard de Vinci a-t-il terminé ses jours ?",
+        "options": ["Vinci", "Florence", "Paris", "Amboise"],
+        "correct": 3,
+        "feedback": "Léonard de Vinci est mort le 2 mai 1519 à Amboise. Il a passé ses trois dernières années au Clos Lucé, invité par le roi François Ier qui l'admirait."
+    },
+    {
+        "question": "Le texte qualifie Léonard de polymathe. Que signifie ce terme dans ce contexte ?",
+        "options": ["Polyglotte", "Peintre unique", "Touche-à-tout", "Soldat d'élite"],
+        "correct": 2,
+        "feedback": "C’est l'essence même du <Génie de la Renaissance> : ne pas avoir de frontières entre l'art et la science."
+    },
+    {
+        "question": "Parmi ces métiers, lequel n'est PAS explicitement mentionné dans la liste de ses activités ?",
+        "options": ["Urbaniste", "Botaniste", "Explorateur", "Organisateur de spectacles"],
+        "correct": 2,
+        "feedback": "Bien qu'il ait voyagé entre l'Italie et la France, il était un observateur du monde plutôt qu'un explorateur de terres inconnues."
+    },
+    {
+        "question": "À quelle période historique majeure Léonard de Vinci est-il rattaché ?",
+        "options": ["Le Moyen Âge classique", "La Renaissance italienne", "Le Siècle des Lumières", "La Belle Époque"],
+        "correct": 1,
+        "feedback": "La Renaissance est marquée par un renouveau intellectuel et artistique dont Léonard est le symbole mondial."
+    }
+    ]
+
+}
+} 
