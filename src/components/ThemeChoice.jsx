@@ -1,9 +1,9 @@
 import './ThemeChoice.css'
 
-export default function ThemeChoice({ onSelect }) {
+export default function ThemeChoice({pseudo, onSelect }) {
   return (
     <div className="screen content">
-      <h1 className="selection-title">Par quoi souhaites-tu commencer ?</h1>
+      <h1 className="selection-title">{pseudo}, par quoi souhaites-tu commencer?</h1>
       
       <div className="categories-list">
         

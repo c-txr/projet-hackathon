@@ -9,9 +9,11 @@ body {
     font-family: 'Georgia', serif;
 }
 
+
+
 /* Image du personnage */
 .header-image {
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .char-img {

@@ -34,7 +34,9 @@ function App(){
     )}
     {/* 4ème page: l'utilisateur choisit son thème*/}
     {step === 4 && (
-      <ThemeChoice onSelect={(t) => { 
+      <ThemeChoice
+        pseudo={userName}
+        onSelect={(t) => { 
         setCategory(t); 
         setStep(5); 
       }} />
