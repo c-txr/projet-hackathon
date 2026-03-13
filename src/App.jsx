@@ -6,6 +6,7 @@ import ThemeChoice from './components/ThemeChoice'
 import WikiLesson from './components/WikiLesson'
 import quizData from '/src/data/data.json'
 import Quiz from '/src/components/Quiz'
+import Resultpage from './components/ResultPage'
 
 
 function App(){
@@ -49,13 +50,22 @@ function App(){
     )}
     {/*6ème page: le quiz*/}
     {step === 6 && (
-      <Quiz questions={quizData[category].questions} onFinish={(s) => 
+      <Quiz questions={quizData[category].questions}
+      category={category}
+      title={quizData[category].title}
+      onFinish={(s) => 
       { setFinalScore(s); 
       setStep(7); 
       }} />
       )}
     
-    {step === 5 && <div className="result">Score final : {finalScore}</div>}
+    {step === 7 && (
+  <Resultpage 
+    score={finalScore} 
+    category={category}
+    onRestart={() => setStep(2)} // Optionnel: pour recommencer le jeu
+  />
+)}
     </div>
   </div>
 )
