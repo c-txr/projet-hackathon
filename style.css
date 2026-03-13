@@ -1,0 +1,36 @@
+/* CSS reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  /* design system */
+:root {
+    --bg-main: #FFFFFF;
+    --text-main: #202122;
+    --ui-grey: #EAECF0;
+    --wiki-blue: #3366CC;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}

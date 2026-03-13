@@ -1,0 +1,31 @@
+.xp-badge-result {
+    background: #f1c40f;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    box-shadow: 0 4px 0 #d35400;
+    transform: rotate(5deg);
+}
+
+.ecran-blanc{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.container-mascotte {
+    position: relative; /* Pour que le badge se place par rapport à l'image */
+    margin: 20px auto;
+}
+
+.container-mascotte img{
+    width: 200px
+}
+
+.felicitations-zone button{
+   margin-top: 30px;
+}
