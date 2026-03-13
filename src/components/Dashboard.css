@@ -1,0 +1,58 @@
+.dashboard-container { 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.back-btn { 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    background: none; 
+    border: none; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    z-index: 50; 
+}
+.mascot-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    padding: 20px 0; 
+    overflow-y: auto; 
+    padding-bottom: 50px;
+}
+.mascot-card { 
+    background: #EAECF0; 
+    padding: 10px; 
+    border-radius: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    transition: all 0.3s ease;
+}
+.mascot-card img { 
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain; 
+    margin-bottom: 10px; 
+}
+.mascot-card h3 {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #202122;
+}
+.mascot-card p {
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+.mascot-card.locked { 
+    opacity: 0.4; 
+    filter: grayscale(100%); 
+}
+.mascot-card.unlocked { 
+    border: 2px solid #00AF89; 
+    background: #E6F7F4; 
+    color: #00AF89;
+}

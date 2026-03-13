@@ -7,6 +7,8 @@ import WikiLesson from './components/WikiLesson'
 import quizData from '/src/data/data.json'
 import Quiz from '/src/components/Quiz'
 import Resultpage from './components/ResultPage'
+import Dashboard from './components/Dashboard'
+
 
 
 function App(){
@@ -90,6 +92,14 @@ function App(){
     onQuit={() => setStep(4)}
   />
 )}
+{/* 8ème page: le dashboard profil */}
+    {step === 8 && (
+      <Dashboard 
+        userName={userName} 
+        totalXP={totalXP} 
+        onBack={() => setStep(4)} 
+      />
+    )}
     </div>
   </div>
 )
