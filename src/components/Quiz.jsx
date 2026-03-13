@@ -64,7 +64,7 @@ export default function Quiz({ questions, category, title, onFinish }) {
                 <img 
                     src={
                         mood === 'success' ? "/assets/mascotte-cheerleader.png":
-                        mood === 'error' ? "assets/Cheerleader-sad.png":
+                        mood === 'error' ? "/assets/cheerleader-sad.png":
                         "/assets/teaching.png"
                      } 
                      alt="Wiki Mascotte" 

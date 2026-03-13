@@ -29,6 +29,7 @@ const RESULTS_DATA = {
 };
 
 export default function Resultpage({ score, category, onRestart }) {
+
 // On définit les variantes de contenu
 const catKey = category.toLowerCase();
   const scoreKey = Math.round(score / 50) * 50; 
