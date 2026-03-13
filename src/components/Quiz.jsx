@@ -61,7 +61,7 @@ export default function Quiz({ questions, category, title, onFinish }) {
             </header>
             {/*<Mascotte mood={mood}/>*/}
             <div className="visual-container">
-                <img src={categoryAssets[category]} alt="Portraits Tudors" className="main-img" loading="lazy"/>
+                <img loading="lazy" src={categoryAssets[category]} alt="Portraits Tudors" className="main-img" />
                 
                 <img 
                     src={
