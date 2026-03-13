@@ -54,22 +54,22 @@
         "feedback": "Le système solaire est constitué de 8 planètes: Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune."
     },
      {
-        "question": "",
-        "options": [""],
-        "correct":,
-        "feedback": ""
+        "question": "Comment s'appelle la galaxie dont fait partie le système solaire ?",
+        "options": ["La galaxie du Tourbillon", "La galaxie du Cercle", "La Voie Lactée", "La Galaxie du Triangle"],
+        "correct": 2,
+        "feedback": "Notre système solaire fait parti de la Voie Lactée"
     },
      {
-        "question": "",
-        "options": [""],
-        "correct":,
-        "feedback": ""
+        "question": "Quelle est la deuxième planète géante gazeuse après Jupiter",
+        "options": ["Saturne", "Neptune", "Mars", "Uranus"],
+        "correct": 0,
+        "feedback": "Jupiter et Saturne sont les deux planètes gazeuse géantes de notre système solaire"
     },
      {
-        "question": "",
-        "options": [""],
-        "correct":,
-        "feedback": ""
+        "question": "Le système solaire comprends 4 planètes tellurique (Mercure, Vénus, la Terre et...",
+        "options": ["Neptune", "Mars", "Jupiter", "Uranus"],
+        "correct": 1,
+        "feedback": "Neptune est une planète géante de glace"
     }
     ]
 
@@ -83,7 +83,7 @@
         "question": "Quelle est la date de naissance exacte de Léonard de Vinci selon notre calendrier actuel ?",
         "options": ["15 avril 1452", "14 avril 1452", "2 mai 1519", "12 avril 1452"],
         "correct": 1,
-        "feedback": "Léonard de Vinci est né le 14 avril 1452 de notre calendrier actuel. Le décalage entre le 14 et le 15 avril vient du passage du calendrier julien au calendrier grégorien"
+        "feedback": "Léonard de Vinci est né le 14 avril 1452 de notre calendrier actuel. Le décalage entre le 14 et le 15 avril vient du passage du calendrier julien au calendrier grégorien."
     },
     {
         "question": "Dans quelle ville française Léonard de Vinci a-t-il terminé ses jours ?",
