@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './Quiz.css'
 import Mascotte from './Mascotte';
 
+const clicAudio = new Audio('/assets/clic.mp3');
+
 export default function Quiz({ questions, category, title, onFinish, onQuit }) {
 
     /* La mémoire */
@@ -61,9 +63,13 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
             <header style={{ position: 'relative', width: '100%' }}>
              {/* Le bouton quitter en haut à gauche */}
             <button 
-                    onClick={() => {
-                        console.log("Le bouton Croix a été cliqué !");
-                        onQuit();
+                   onClick={() => {
+                        clicAudio.play(); // Le son part instantanément car il est en mémoire
+                        
+                        // On laisse 400ms pour que le "tic" finisse de sonner
+                        setTimeout(() => {
+                            onQuit();
+                        }, 400);
                     }}
                     style={{ 
                         position: 'absolute', 
