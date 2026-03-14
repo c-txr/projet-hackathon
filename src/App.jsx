@@ -13,8 +13,13 @@ import Dashboard from './components/Dashboard'
 
 function App(){
   const [step, setStep] = useState(1); /* numéro de la page actuelle */
-    const [totalXP, setTotalXP] = useState(() => {
-    return parseInt(localStorage.getItem("wikiLearn_xp")) || 0;
+  const [userName, setUserName] = useState(() => {
+    return localStorage.getItem("wikiLearn_pseudo") || "";
+  });
+
+  const [userXP, setUserXP] = useState(() => {
+    const savedXP = localStorage.getItem("wikiLearn_xp_obj");
+    return savedXP ? JSON.parse(savedXP) : { histoire: 0, science: 0, culture: 0 };
   });
 
   useEffect(() => {
@@ -22,8 +27,8 @@ function App(){
   }, [userName]);
 
   useEffect(() => {
-    localStorage.setItem("wikiLearn_xp", totalXP);
-  }, [totalXP]);
+    localStorage.setItem("wikiLearn_xp_obj", JSON.stringify(userXP));
+  }, [userXP]);
   
   const [category, setCategory] = useState('histoire'); /* retient le thème choisi */
   const [finalScore, setFinalScore] = useState(0); /* enregistre les pts gagnés à la fin du quiz*/
