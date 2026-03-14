@@ -20,7 +20,7 @@ function App(){
 
     // 2. On configure la musique de fond 3DS
     backgroundMusic.loop = true; // Pour qu'elle tourne en boucle
-    backgroundMusic.volume = 0.15; // Volume à 15% pour rester discret
+    backgroundMusic.volume = 0.10; // Volume à 15% pour rester discret
     backgroundMusic.play();
 
     // 3. On passe à la page suivante

@@ -3,6 +3,14 @@ import './Quiz.css'
 import Mascotte from './Mascotte';
 
 const clicAudio = new Audio('/assets/clic.mp3');
+const succesAudio = new Audio('/assets/succes.mp3');
+succesAudio.volume = 0.4; // 40% du volume
+
+const erreurAudio = new Audio('/assets/erreur.mp3');
+erreurAudio.volume = 0.4;
+
+const win31Audio = new Audio('/assets/win31.mp3');
+win31Audio.volume = 0.3; // Trompette Windows douce
 
 export default function Quiz({ questions, category, title, onFinish, onQuit }) {
 
@@ -32,12 +40,12 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
         const scoreFinalCalculé = score + pointsGagnes;
 
         if (isCorrect) {
-            new Audio('/assets/succes.mp3').play(); // 🎵 Son de victoire
+            succesAudio.currentTime = 0; succesAudio.play(); // 🎵 Son de victoire
             setMood('success');
             setScore(score + 50);
             setShowXP(true);
         } else {
-            new Audio('/assets/erreur.mp3').play(); // 🎵 Son d'erreur (Minecraft)
+            erreurAudio.currentTime = 0; erreurAudio.play(); // 🎵 Son d'erreur (Minecraft)
             setMood('error');
         }
 
@@ -49,7 +57,7 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
             if (index + 1 < questions.length) {
                 setIndex(index + 1);
             } else {
-                new Audio('/assets/win31.mp3').play(); // 🎺 Son TADA Windows !
+                win31Audio.play(); // 🎺 Son TADA Windows !
                 onFinish(scoreFinalCalculé);
             }
         }, 1500);
