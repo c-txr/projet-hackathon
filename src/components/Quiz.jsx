@@ -25,15 +25,17 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
         setSelectedAnswer(selectedIndex);
         const isCorrect = selectedIndex === currentQ.correct;
 
+        // On passe la récompense à 10 XP pour équilibrer le jeu
         const pointsGagnes = isCorrect ? 50 : 0;
-    /* On crée une variable qui contient le score total réel */
-     const scoreFinalCalculé = score + pointsGagnes;
+        const scoreFinalCalculé = score + pointsGagnes;
 
         if (isCorrect) {
+            new Audio('/assets/succes.mp3').play(); // 🎵 Son de victoire
             setMood('success');
-            setScore(score +  50 ); /* si réponse correcte, + 50 pts */
+            setScore(score + 50);
             setShowXP(true);
         } else {
+            new Audio('/assets/erreur.mp3').play(); // 🎵 Son d'erreur (Minecraft)
             setMood('error');
         }
 
@@ -45,6 +47,7 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
             if (index + 1 < questions.length) {
                 setIndex(index + 1);
             } else {
+                new Audio('/assets/win31.mp3').play(); // 🎺 Son TADA Windows !
                 onFinish(scoreFinalCalculé);
             }
         }, 1500);
