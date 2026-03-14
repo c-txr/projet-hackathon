@@ -12,23 +12,24 @@ export default function Dashboard({ userName, userXP, onBack }) {
         { name: "Palefrenier", xpRequired: 50, img: "/assets/mascotte-palefrenier.png" },
         { name: "Fou du Roi", xpRequired: 100, img: "/assets/mascotte-fou.png" },
         { name: "Chevalier", xpRequired: 150, img: "/assets/mascotte-chevalier.png" },
-        { name: "Roi", xpRequired: 200, img: "/assets/mascotte-roi.png" }
+        { name: "Princesse", xpRequired: 200, img: "/assets/mascotte-princesse.png" },
+        { name: "Roi", xpRequired: 250, img: "/assets/mascotte-roi.png" }
         ],
          "science": [
-            { name: "Cloué au sol", xpRequired: 0, img: "/assets/mascotte-cloue.png" },
+            { name: "Cloué au sol", xpRequired: 0, img: "/assets/mascotte-sol.png" },
             { name: "Étoiles plein les yeux", xpRequired: 50, img: "/assets/mascotte-etoiles.png" },
-            { name: "Contrôleur Aérien", xpRequired: 100, img: "/assets/mascotte-controleur.png" },
+            { name: "Contrôleur Aérien", xpRequired: 100, img: "/assets/mascotte-tour.png" },
             { name: "Pilote d'Elite", xpRequired: 150, img: "/assets/mascotte-pilote.png" },
             { name: "Astronaute", xpRequired: 200, img: "/assets/mascotte-astronaute.png" },
             { name: "Alien Omniscient", xpRequired: 250, img: "/assets/mascotte-alien.png" }
         ],
         "culture": [
-            { name: "Artiste sans inspi", xpRequired: 0, img: "/assets/mascotte-sansinspi.png" },
+            { name: "Artiste sans inspi", xpRequired: 0, img: "/assets/mascotte-perdu.png" },
             { name: "Dessinateur", xpRequired: 50, img: "/assets/mascotte-dessinateur.png" },
             { name: "Guitariste", xpRequired: 100, img: "/assets/mascotte-guitariste.png" },
             { name: "Photographe", xpRequired: 150, img: "/assets/mascotte-photographe.png" },
             { name: "Peintre de renom", xpRequired: 200, img: "/assets/mascotte-peintre.png" },
-            { name: "Star du cinéma", xpRequired: 250, img: "/assets/mascotte-star.png" }
+            { name: "Star du cinéma", xpRequired: 250, img: "/assets/mascotte-cinema.png" }
         ]
     };
 
