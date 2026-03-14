@@ -13,11 +13,7 @@ import Dashboard from './components/Dashboard'
 
 function App(){
   const [step, setStep] = useState(1); /* numéro de la page actuelle */
-  const [userName, setUserName] = useState(() => {
-    return localStorage.getItem("wikiLearn_pseudo") || "";
-  });
-  
-  const [totalXP, setTotalXP] = useState(() => {
+    const [totalXP, setTotalXP] = useState(() => {
     return parseInt(localStorage.getItem("wikiLearn_xp")) || 0;
   });
 
@@ -28,6 +24,7 @@ function App(){
   useEffect(() => {
     localStorage.setItem("wikiLearn_xp", totalXP);
   }, [totalXP]);
+  
   const [category, setCategory] = useState('histoire'); /* retient le thème choisi */
   const [finalScore, setFinalScore] = useState(0); /* enregistre les pts gagnés à la fin du quiz*/
 
@@ -79,7 +76,10 @@ function App(){
       title={quizData[category].title}
       onFinish={(s) => { 
         setFinalScore(s);
-        setTotalXP((prevXP) => prevXP + s);
+        setUserXP((prev) => ({
+        ...prev,
+        [category]: prev[category] + s
+        })); 
         setStep(7); 
       }}
       onQuit={() => setStep(4)}
@@ -98,7 +98,7 @@ function App(){
     {step === 8 && (
       <Dashboard 
         userName={userName} 
-        totalXP={totalXP} 
+        userXP={userXP} 
         onBack={() => setStep(4)} 
       />
     )}
