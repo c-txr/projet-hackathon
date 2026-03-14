@@ -56,3 +56,27 @@
     background: #E6F7F4; 
     color: #00AF89;
 }
+.collection-scroll {
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: #3366CC;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #EAECF0;
+}
+
+.mascot-card h4 {
+    font-size: 0.85rem;
+    margin: 5px 0;
+    color: #202122;
+    text-align: center;
+}
