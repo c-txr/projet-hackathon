@@ -3,11 +3,12 @@ import './Quiz.css'
 import Mascotte from './Mascotte';
 
 const clicAudio = new Audio('/assets/clic.mp3');
+succesAudio.volume = 0.6;
 const succesAudio = new Audio('/assets/succes.mp3');
-succesAudio.volume = 0.4; // 40% du volume
+succesAudio.volume = 0.3; // 30% du volume
 
 const erreurAudio = new Audio('/assets/erreur.mp3');
-erreurAudio.volume = 0.4;
+erreurAudio.volume = 0.3;
 
 const win31Audio = new Audio('/assets/win31.mp3');
 win31Audio.volume = 0.3; // Trompette Windows douce
