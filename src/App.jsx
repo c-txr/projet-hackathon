@@ -9,9 +9,23 @@ import Quiz from '/src/components/Quiz'
 import Resultpage from './components/ResultPage'
 import Dashboard from './components/Dashboard'
 
-
+const startupSound = new Audio('/assets/startup.mp3');
+const backgroundMusic = new Audio('/assets/bgm.mp3');
 
 function App(){
+  const startExperience = () => {
+    // 1. On lance le démarrage du son PSP
+    startupSound.play();
+    startupSound.volume = 0.30;
+
+    // 2. On configure la musique de fond 3DS
+    backgroundMusic.loop = true; // Pour qu'elle tourne en boucle
+    backgroundMusic.volume = 0.10; // Volume à 15% pour rester discret
+    backgroundMusic.play();
+
+    // 3. On passe à la page suivante
+    setStep(3);
+  };
   const [step, setStep] = useState(1); /* numéro de la page actuelle */
   const [userName, setUserName] = useState(() => {
     return localStorage.getItem("wikiLearn_pseudo") || "";
@@ -44,7 +58,7 @@ function App(){
 
     {/* 2ème page: l'accueil'*/}
     {step === 2 && (
-      <Accueil onNext={() => setStep(3)} />
+     <Accueil onNext={startExperience} />
     )}
 
     {/* 3ème page: l'utilisateur choisit son pseudo*/}
@@ -63,7 +77,10 @@ function App(){
         setCategory(t); 
         setStep(5); 
       }} 
-      onOpenProfile={() => setStep(8)}
+      onOpenProfile={() => {
+        new Audio('/assets/clic.mp3').play(); // 👆 Le clic UI de la PSP
+        setStep(8);
+      }}
       />
     )}
 

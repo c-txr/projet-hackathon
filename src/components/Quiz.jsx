@@ -2,6 +2,14 @@ import { useState } from 'react';
 import './Quiz.css'
 import Mascotte from './Mascotte';
 
+const clicAudio = new Audio('/assets/clic.mp3');
+const succesAudio = new Audio('/assets/succes.mp3');
+succesAudio.volume = 0.3; // 30% du volume
+const erreurAudio = new Audio('/assets/erreur.mp3');
+erreurAudio.volume = 0.3;
+const win31Audio = new Audio('/assets/win31.mp3');
+win31Audio.volume = 0.3; // Trompette Windows douce
+
 export default function Quiz({ questions, category, title, onFinish, onQuit }) {
 
     /* La mémoire */
@@ -25,15 +33,17 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
         setSelectedAnswer(selectedIndex);
         const isCorrect = selectedIndex === currentQ.correct;
 
+        // On passe la récompense à 10 XP pour équilibrer le jeu
         const pointsGagnes = isCorrect ? 50 : 0;
-    /* On crée une variable qui contient le score total réel */
-     const scoreFinalCalculé = score + pointsGagnes;
+        const scoreFinalCalculé = score + pointsGagnes;
 
         if (isCorrect) {
+            succesAudio.currentTime = 0; succesAudio.play(); // 🎵 Son de victoire
             setMood('success');
-            setScore(score +  50 ); /* si réponse correcte, + 50 pts */
+            setScore(score + 50);
             setShowXP(true);
         } else {
+            erreurAudio.currentTime = 0; erreurAudio.play(); // 🎵 Son d'erreur (Minecraft)
             setMood('error');
         }
 
@@ -45,6 +55,7 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
             if (index + 1 < questions.length) {
                 setIndex(index + 1);
             } else {
+                win31Audio.play(); // 🎺 Son TADA Windows !
                 onFinish(scoreFinalCalculé);
             }
         }, 1500);
@@ -58,9 +69,13 @@ export default function Quiz({ questions, category, title, onFinish, onQuit }) {
             <header style={{ position: 'relative', width: '100%' }}>
              {/* Le bouton quitter en haut à gauche */}
             <button 
-                    onClick={() => {
-                        console.log("Le bouton Croix a été cliqué !");
-                        onQuit();
+                   onClick={() => {
+                        clicAudio.play(); // Le son part instantanément car il est en mémoire
+                        
+                        // On laisse 400ms pour que le "tic" finisse de sonner
+                        setTimeout(() => {
+                            onQuit();
+                        }, 400);
                     }}
                     style={{ 
                         position: 'absolute', 
