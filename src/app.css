@@ -1,0 +1,125 @@
+/* =========================================
+   MENU PARAMÈTRES (MODALE) - WIKIMEDIA DESIGN
+   ========================================= */
+
+/* L'icône engrenage en haut à GAUCHE */
+.settings-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px; /* 👈 Placé à gauche comme demandé ! */
+  z-index: 100;
+  background-color: #EAECF0; /* Gris interface Wiki pour bien ressortir */
+  border: 1px solid #202122;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+}
+
+.settings-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+/* Le fond d'assombrissement */
+.settings-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(32, 33, 34, 0.7); /* Noir Wiki semi-transparent */
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* La boîte centrale du menu - 100% Charte Wiki */
+.settings-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF; /* Fond principal */
+  color: #202122; /* Texte principal */
+  padding: 30px 25px;
+  border-radius: 25px;
+  border: 2px solid #EAECF0; /* Bordure Gris interface */
+  box-shadow: 0px 15px 35px rgba(0,0,0,0.2);
+  width: 85%;
+  max-width: 320px;
+  font-family: sans-serif; /* Corps de texte applicatif (Lisibilité optimale) */
+}
+
+/* Titre encyclopédique */
+.settings-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-family: 'Georgia', serif; /* Typographie Serif institutionnelle */
+  color: #202122;
+  border-bottom: 2px solid #EAECF0;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Les boutons ON/OFF */
+.toggle-btn {
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 30px; /* Forme pilule */
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: all 0.2s ease;
+}
+
+/* État ON : Charte "Bonne Réponse" (Succès) */
+.toggle-btn.active {
+  background-color: #E6F7F4;
+  border: 2px solid #00AF89;
+  color: #202122;
+  box-shadow: 0 4px 0px #00AF89;
+}
+
+/* État OFF : Charte "Mauvaise Réponse" (Erreur) */
+.toggle-btn.muted {
+  background-color: #FFEBEE;
+  border: 2px solid #D32F2F;
+  color: #202122;
+  box-shadow: 0 4px 0px #D32F2F;
+  transform: translateY(2px); /* Effet bouton enfoncé */
+}
+
+.toggle-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* Le bouton pour fermer la modale */
+.close-settings-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background-color: #3366CC; /* Bleu Wikipedia pour l'action principale */
+  color: #FFFFFF;
+  border: 1px solid #1a1a1a;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  box-shadow: 0 4px 0px #2a4a91;
+  transition: transform 0.2s;
+}
+
+.close-settings-btn:hover {
+  transform: scale(1.05);
+}

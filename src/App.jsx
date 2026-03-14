@@ -8,9 +8,11 @@ import quizData from '/src/data/data.json'
 import Quiz from '/src/components/Quiz'
 import Resultpage from './components/ResultPage'
 import Dashboard from './components/Dashboard'
+import './App.css';
 
 const startupSound = new Audio('/assets/startup.mp3');
 const backgroundMusic = new Audio('/assets/bgm.mp3');
+const clicAudio = new Audio('/assets/clic.mp3');
 
 function App(){
   const startExperience = () => {
@@ -27,6 +29,23 @@ function App(){
     setStep(3);
   };
   const [step, setStep] = useState(1); /* numéro de la page actuelle */
+  /* --- LOGIQUE DES PARAMÈTRES (SON/MUSIQUE) --- */
+  const [showSettings, setShowSettings] = useState(false); // Affiche ou cache le menu
+  const [isMusicMuted, setIsMusicMuted] = useState(false);
+  const [isSfxMuted, setIsSfxMuted] = useState(false);
+
+  const toggleMusic = () => {
+    const newMuted = !isMusicMuted;
+    setIsMusicMuted(newMuted);
+    backgroundMusic.muted = newMuted; // Coupe la musique 3DS
+  };
+
+  const toggleSfx = () => {
+    const newMuted = !isSfxMuted;
+    setIsSfxMuted(newMuted);
+    startupSound.muted = newMuted; // Coupe le démarrage PSP
+    clicAudio.muted = newMuted;    // Coupe les clics d'interface
+  };
   const [userName, setUserName] = useState(() => {
     return localStorage.getItem("wikiLearn_pseudo") || "";
   });
@@ -50,6 +69,39 @@ function App(){
   return (
     <div className='App'>
       <div className='phone-frame'>
+      {/* BOUTON PARAMÈTRES (ENGRENAGE) - Affiché à partir de l'étape 2 */}
+      {step >= 2 && (
+        <button className="settings-btn" onClick={() => setShowSettings(true)}>
+          ⚙️
+        </button>
+      )}
+
+      {/* FENÊTRE MODALE DES PARAMÈTRES */}
+      {showSettings && (
+        <div className="settings-modal-overlay">
+          <div className="settings-modal-content">
+            <h2>Paramètres</h2>
+            
+            <button 
+              className={`toggle-btn ${isMusicMuted ? 'muted' : 'active'}`} 
+              onClick={toggleMusic}
+            >
+              {isMusicMuted ? "🔈 Musique : OFF" : "🔊 Musique : ON"}
+            </button>
+            
+            <button 
+              className={`toggle-btn ${isSfxMuted ? 'muted' : 'active'}`} 
+              onClick={toggleSfx}
+            >
+              {isSfxMuted ? "🔈 Effets Sonores : OFF" : "🔊 Effets Sonores : ON"}
+            </button>
+            
+            <button className="close-settings-btn" onClick={() => setShowSettings(false)}>
+              Fermer ✖️
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* 1ère page: la loading page*/}
       {step === 1 && (                 /* si step 1 --> affiche LandingPage*/
@@ -87,8 +139,9 @@ function App(){
     {/* 5ème page: le cours via l'API*/}
     {step === 5 && (
       <WikiLesson theme={category} onReady={() => 
+      {if (!isSfxMuted) clicAudio.play(); // 👆 Joue le clic seulement si le SFX est activé  
       setStep(6)
-      } />
+      }} />
     )}
 
     {/*6ème page: le quiz*/}
