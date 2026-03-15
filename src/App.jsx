@@ -6,7 +6,7 @@ import ThemeChoice from './components/ThemeChoice'
 import WikiLesson from './components/WikiLesson'
 import quizData from './data/data.json'
 import Quiz from './components/Quiz'
-import Resultpage from './components/ResultPage'
+import ResultPage from './components/ResultPage'
 import Dashboard from './components/Dashboard'
 import './StyleGlobal.css';
 
