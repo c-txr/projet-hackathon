@@ -5,7 +5,7 @@
 /* L'icône engrenage en haut à GAUCHE */
 .settings-btn {
   position: absolute;
-  bottom: 45px;
+  bottom: 35px;
   left: 25px; 
   z-index: 100;
   
