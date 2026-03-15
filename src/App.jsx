@@ -4,8 +4,8 @@ import Accueil from './components/Accueil'
 import PseudoChoice from './components/PseudoChoice'
 import ThemeChoice from './components/ThemeChoice'
 import WikiLesson from './components/WikiLesson'
-import quizData from '/src/data/data.json'
-import Quiz from '/src/components/Quiz'
+import quizData from './data/data.json'
+import Quiz from './components/Quiz'
 import Resultpage from './components/ResultPage'
 import Dashboard from './components/Dashboard'
 import './App.css';
@@ -162,7 +162,7 @@ function App(){
       )}
     
     {step === 7 && (
-  <Resultpage 
+  <ResultPage 
     score={finalScore} 
     category={category}
     onRestart={() => setStep(4)} // Optionnel: pour recommencer le jeu
