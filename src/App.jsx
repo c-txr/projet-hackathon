@@ -8,7 +8,7 @@ import quizData from './data/data.json'
 import Quiz from './components/Quiz'
 import Resultpage from './components/ResultPage'
 import Dashboard from './components/Dashboard'
-import './App.css';
+import './StyleGlobal.css';
 
 const startupSound = new Audio('/assets/startup.mp3');
 const backgroundMusic = new Audio('/assets/bgm.mp3');
