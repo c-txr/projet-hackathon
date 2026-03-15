@@ -44,8 +44,8 @@
 /* --- Bouton Profil en haut à droite --- */
 .profile-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    bottom: 45px;
+    right: 25px;
     padding: 6px 12px;
     background-color: #3366CC;
     color: white;

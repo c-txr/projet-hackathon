@@ -69,8 +69,8 @@ function App(){
   return (
     <div className='App'>
       <div className='phone-frame'>
-      {/* BOUTON PARAMÈTRES (ENGRENAGE) - Affiché à partir de l'étape 2 */}
-      {step >= 2 && (
+      {/* BOUTON PARAMÈTRES (ENGRENAGE) - Affiché menu (4), leçon (5) et quiz (6) */}
+      { (step >= 4 && step <= 6) && (
         <button className="settings-btn" onClick={() => setShowSettings(true)}>
           ⚙️
         </button>
