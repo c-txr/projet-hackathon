@@ -123,4 +123,16 @@
 
 .close-settings-btn:hover {
   transform: scale(1.05);
+ }
+ /* --- BOUTON RESET --- */
+.reset-btn {
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #ff2a3d;
 }

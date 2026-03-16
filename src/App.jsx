@@ -34,6 +34,20 @@ function App(){
   const [isMusicMuted, setIsMusicMuted] = useState(false);
   const [isSfxMuted, setIsSfxMuted] = useState(false);
 
+  const handleReset = () => {
+    // 1. On nettoie la mémoire du navigateur
+    localStorage.removeItem("wikiLearn_pseudo");
+    localStorage.removeItem("wikiLearn_xp_obj");
+    
+    // 2. On remet les compteurs à zéro dans l'application
+    setUserName("");
+    setUserXP({ histoire: 0, science: 0, culture: 0 });
+    setFinalScore(0);
+    
+    // 3. On ferme la modale et on retourne à l'écran titre
+    setShowSettings(false);
+    setStep(1); 
+  };
   const toggleMusic = () => {
     const newMuted = !isMusicMuted;
     setIsMusicMuted(newMuted);
